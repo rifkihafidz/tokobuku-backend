@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->longText('description');
             $table->integer('price');
             $table->integer('quantity');
+            $table->string('photo');
 
             $table->softDeletes();
             $table->timestamps();

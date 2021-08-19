@@ -28,7 +28,7 @@
                                 class="form-control @error('photo') is-invalid @enderror"/>
                 @error('photo') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="id_default" class="form-control-label">Jadikan Default</label>
                         <div class="form-check">
                             <div class="radio">
@@ -53,22 +53,7 @@
                                 <div class="text-muted">{{ $message }}</div> 
                             @enderror
                         </div>
-                    {{-- <br>
-                    <label>
-                        <input type="radio"
-                                name="id_default" 
-                                value="1" 
-                                class="form-control @error('id_default') is-invalid @enderror"/>Ya
-                    </label>
-                    &nbsp;
-                    <label>
-                        <input type="radio"
-                                name="id_default" 
-                                value="0" 
-                                class="form-control @error('id_default') is-invalid @enderror"/>Tidak
-                    </label>
-                    @error('id_default') <div class="text-muted">{{ $message }}</div> @enderror --}}
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">
                         Tambah Foto Barang

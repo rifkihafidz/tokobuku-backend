@@ -59,7 +59,7 @@ class ProductGalleryController extends Controller
         $data['photo'] = $request->file('photo')->store(
             'assets/product', 'public'
         );
-
+        $data['id_default'] = 1;
         ProductGallery::create($data);
         return redirect()->route('product-galleries.index');
     }

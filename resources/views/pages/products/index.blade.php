@@ -18,6 +18,7 @@
                                         <th>Type</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
+                                        <th>Foto</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -30,9 +31,12 @@
                                             <td>Rp {{ number_format($item->price, 0, ",",",") }}</td>
                                             <td>{{ $item->quantity }}</td>
                                             <td>
-                                                <a href="{{ route('products.gallery', $item->id) }}" class="btn btn-info btn-sm">
+                                                <img src="http://127.0.0.1:8000/storage/{{$item->photo}}" alt=""/>
+                                            </td>
+                                            <td>
+                                                {{-- <a href="{{ route('products.gallery', $item->id) }}" class="btn btn-info btn-sm">
                                                     <i class="fa fa-picture-o"></i>
-                                                </a>
+                                                </a> --}}
                                                 <a href="{{ route('products.edit', $item->id) }}"class="btn btn-primary btn-sm">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>

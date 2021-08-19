@@ -7,7 +7,7 @@
             <small>{{ $item->name }}</small>
         </div>
         <div class="card-body card-block">
-            <form action="{{ route('products.update', $item->id) }}" method="POST">
+            <form action="{{ route('products.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 <div class="form-group">
@@ -47,6 +47,16 @@
                             value="{{ old('quantity') ? old('quantity') : $item->quantity }}" 
                             class="form-control @error('quantity') is-invalid @enderror"/>
                     @error('quantity') <div class="text-muted">{{ $message }}</div> @enderror
+                </div>
+                <div class="form-group">
+                    <label for="photo" class="form-control-label">Foto Barang</label>
+                        <input type="file"
+                                name="photo" 
+                                value="{{ old('photo') }}" 
+                                accept="image/*"
+                                required
+                                class="form-control-file @error('photo') is-invalid @enderror"/>
+                @error('photo') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">

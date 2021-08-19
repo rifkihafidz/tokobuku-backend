@@ -11,7 +11,7 @@ class TransactionDetail extends Model
 
     protected $fillable =
     [
-        'products_id', 'transactions_id'
+        'products_id', 'transactions_id', 'qty'
     ];
 
     protected $hidden =

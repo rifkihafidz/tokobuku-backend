@@ -5,14 +5,14 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     public function all(Request $request)
     {
         $id = $request->input('id');
-        $limit = $request->input('limit', 6);
+        $limit = $request->input('limit', 7);
         $name = $request->input('name');
         $slug = $request->input('slug');
         $type = $request->input('type');
@@ -55,7 +55,17 @@ class ProductController extends Controller
             $product->where('price', '<=', $price_to);
 
         return ResponseFormatter::success(
-            $product->paginate($limit), 'Data list produk berhasil diambil'
+            $product->paginate(), 'Data list produk berhasil diambil'
         );
+    }
+
+    public function fetch(Request $request)
+    {
+        $value = "%$request->value%";
+        $product = Product::where('name', 'like', $value)->get();
+            return ResponseFormatter::success(
+               $product, 'Data berhasil diambil'
+           ); 
+        
     }
 }

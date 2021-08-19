@@ -28,7 +28,6 @@ class ProductController extends Controller
     public function index()
     {
         $items = Product::all();
-
         return view('pages.products.index')->with([
             'items' => $items
         ]);
@@ -54,7 +53,9 @@ class ProductController extends Controller
     {
         $data = $request->all();
         $data['slug'] = Str::slug($request->name);
-
+        $data['photo'] = $request->file('photo')->store(
+            'assets/product', 'public'
+        );
         Product::create($data);
         return redirect()->route('products.index');
     }
@@ -97,7 +98,9 @@ class ProductController extends Controller
     {
         $data = $request->all();
         $data['slug'] = Str::slug($request->name);
-
+        $data['photo'] = $request->file('photo')->store(
+            'assets/product', 'public'
+        );
         $item = Product::findOrFail($id);
         $item->update($data);
 
