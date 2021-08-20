@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Daftar Barang</h4>
+                        <h4 class="box-title">Daftar Buku</h4>
                     </div>
                     <div class="card-body--">
                         <div class="table-stats order-table ov-h">
@@ -14,12 +14,12 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Type</th>
-                                        <th>Price</th>
+                                        <th>Nama Buku</th>
+                                        <th>Kategori</th>
+                                        <th>Harga</th>
                                         <th>Quantity</th>
                                         <th>Foto</th>
-                                        <th>Action</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -19,13 +19,14 @@
                                         <th>No. Telepon</th>
                                         <th>Total Transaksi</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $nomor=1 ?>
                                     @forelse ($items as $item)
                                         <tr>
-                                            <td>{{ $item->id }}</td>
+                                            <td>{{ $nomor }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->number }}</td>
@@ -62,18 +63,9 @@
                                                     class="btn btn-info btn-sm">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <a href="{{ route('transactions.edit', $item->id) }}" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-pencil"></i>
-                                                </a>                                          
-                                                <form action="{{ route('transactions.destroy', $item->id) }}"method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <button class="btn btn-danger btn-sm">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </form>
                                             </td>
                                         </tr>
+                                    <?php $nomor++ ?>
                                     @empty
                                         <tr>
                                             <td class="text-center p-5" colspan="6">

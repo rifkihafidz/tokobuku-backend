@@ -52,12 +52,12 @@
                     <div class="card-body">
                         <h4 class="box-title">Pembelian Terbaru </h4>
                     </div>
-                    <div class="card-body--">
+                    <div class="card-body">
                         <div class="table-stats order-table ov-h">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>No</th>
                                         <th>Nama</th>
                                         <th>Email</th>
                                         <th>No. Telepon</th>
@@ -66,9 +66,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $no=1; ?>
                                     @forelse ($items as $item)
                                         <tr>
-                                            <td>{{ $item->id }}</td>
+                                            <td>{{ $no }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->number }}</td>
@@ -87,6 +88,7 @@
                                                     </span>
                                             </td>
                                         </tr>
+                                        <?php $no++ ?>
                                     @empty
                                         <tr>
                                             <td class="text-center p-5" colspan="6">
@@ -106,7 +108,7 @@
                     <div class="col-lg-6 col-xl-12">
                         <div class="card br-0">
                             <div class="card-body">
-                                <div class="chart-container ov-h">
+                                <div class="chart-container">
                                     <div id="flotPie1" class="float-chart"></div>
                                 </div>
                             </div>

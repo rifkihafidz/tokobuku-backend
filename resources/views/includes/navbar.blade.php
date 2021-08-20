@@ -2,7 +2,7 @@
 <header id="header" class="header">
     <div class="top-left">
         <div class="navbar-header">
-            <a class="navbar-brand" href={{ route('dashboard') }}><img src="{{ url('images/logo_ks.png') }}" alt="Logo"></a>
+            <a class="navbar-brand" href={{ route('dashboard') }}><img src="{{ url('images/logo_bs.png') }}" alt="Logo"></a>
             <a class="navbar-brand hidden" href={{ route('dashboard') }}><img src="{{ url('images/logo2.png')}}" alt="Logo"></a>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
         </div>

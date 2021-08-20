@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <strong>Ubah Barang </strong>
+            <strong>Ubah Buku </strong>
             <small>{{ $item->name }}</small>
         </div>
         <div class="card-body card-block">
@@ -11,7 +11,7 @@
                 @method('PUT')
                 @csrf
                 <div class="form-group">
-                    <label for="name" class="form-control-label">Nama Barang</label>
+                    <label for="name" class="form-control-label">Nama Buku</label>
                     <input type="text" 
                             name="name" 
                             value="{{ old('name') ? old('name') : $item->name }}" 
@@ -19,7 +19,7 @@
                     @error('name') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="type" class="form-control-label">Tipe Barang</label>
+                    <label for="type" class="form-control-label">Tipe Buku</label>
                     <input type="text" 
                             name="type" 
                             value="{{ old('type') ? old('type') : $item->type }}" 
@@ -27,13 +27,13 @@
                     @error('type') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="description" class="form-control-label">Deskripsi Barang</label>
+                    <label for="description" class="form-control-label">Deskripsi Buku</label>
                     <textarea name="description"
                                 class="ckeditor form-control @error('description') is-invalid @enderror">{{ old('description') ? old('desription') : $item->description }}</textarea>
                     @error('description') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="price" class="form-control-label">Harga Barang</label>
+                    <label for="price" class="form-control-label">Harga Buku</label>
                     <input type="number" 
                             name="price" 
                             value="{{ old('price') ? old('price') : $item->price }}" 
@@ -41,7 +41,7 @@
                     @error('price') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="quantity" class="form-control-label">Kuantitas Barang</label>
+                    <label for="quantity" class="form-control-label">Kuantitas Buku</label>
                     <input type="number" 
                             name="quantity" 
                             value="{{ old('quantity') ? old('quantity') : $item->quantity }}" 
@@ -49,7 +49,7 @@
                     @error('quantity') <div class="text-muted">{{ $message }}</div> @enderror
                 </div>
                 <div class="form-group">
-                    <label for="photo" class="form-control-label">Foto Barang</label>
+                    <label for="photo" class="form-control-label">Foto Buku</label>
                         <input type="file"
                                 name="photo" 
                                 value="{{ old('photo') }}" 
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">
-                        Ubah Barang
+                        Simpan
                     </button>
                 </div>
             </form>

@@ -6,12 +6,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kicks Supply | Admin</title>
+    <title>Books Supply | Admin</title>
     <meta name="description" content="ShaynaAdmin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/bs.ico" type="image/x-icon">
+    <link rel="icon" href="/bs.ico" type="image/x-icon">
 
     {{-- style --}}
     @stack('before-style')
