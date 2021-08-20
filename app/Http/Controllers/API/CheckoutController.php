@@ -15,8 +15,7 @@ class CheckoutController extends Controller
     {
         $index=0;
         $data = $request->except('transaction_details');
-        // dd($data);
-        $data['uuid'] = 'TRX' . mt_rand(10000,99999) . mt_rand(100,999);
+        // $data['uuid'] = 'TRX' . mt_rand(10000,99999) . mt_rand(100,999);
 
         $transaction = Transaction::create($data);
 
@@ -28,7 +27,7 @@ class CheckoutController extends Controller
                 'qty' => $request->qty[$index],
             ]);
 
-            Product::find($product)->decrement('quantity');
+            Product::find($product)->decrement('quantity', $request->qty[$index]);
             $index++;
         }
 
